@@ -3,7 +3,23 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="noticeboard">
-	<select id="select" resultType="com.java.web.MainBean">
-  		SELECT `NO`, `TITLE`, `TEXT` FROM noticeboard WHERE `DELYN` = 'N'
+	<select id="select" parameterType="com.java.web.MainBean" resultType="com.java.web.MainBean">
+  		SELECT `NO`, `TITLE`, `TEXT` FROM noticeboard 
+  		WHERE `DELYN` = 'N'
+  		<if test="title != null">
+  			and (`TITLE` like '%${title}%' or `TEXT` like '%${text}%')
+  		</if>
  	</select>
+ 	
+ 	<insert id="insert" parameterType="com.java.web.MainBean">
+ 		insert into noticeboard (`title`, `text`) values (#{title}, #{text})
+ 	</insert>
+ 	
+ 	<update id="update" parameterType="com.java.web.MainBean">
+ 		update noticeboard set `title` = #{title}, `text` = #{text} where `NO` = ${no}
+ 	</update>
+ 	
+ 	<update id="delete" parameterType="com.java.web.MainBean">
+ 		update noticeboard set `DELYN` = 'Y' where `NO` = ${no}
+ 	</update>
 </mapper>

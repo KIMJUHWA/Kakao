@@ -13,7 +13,7 @@
 				<h1>카카오 로그인</h1>
 			</div>
 			<div class="loginBox-half">
-				<a href="/login"><img src="/resources/img/kakao_login.png"></a>
+				<a href="/loginPage"><img src="/resources/img/kakao_login.png"></a>
 			</div>
 		</div>
 	</div>

@@ -14,7 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
 	
 	@RequestMapping("/login")
-	public String login(HttpServletRequest req, HttpServletResponse res) {
+	public String login() {
+		
+		return "login";
+	}
+	
+	@RequestMapping("/loginPage")
+	public String loginPage(HttpServletRequest req, HttpServletResponse res) {
 		try {
 			String url = "https://kauth.kakao.com/oauth/authorize";
 			url	+= "?client_id=5e45e7bcbf5c5c786829735f9be1f6ac&redirect_uri=";
@@ -27,7 +33,7 @@ public class LoginController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return "login";
+		return "main";
 	}
 	
 	@RequestMapping("/KakaoBack")

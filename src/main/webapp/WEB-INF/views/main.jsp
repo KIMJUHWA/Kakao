@@ -8,6 +8,15 @@
 	<title>main</title>
 	<link rel="stylesheet" href="/resources/css/index.css">
 	<link rel="stylesheet" href="/resources/css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("tbody tr").on("click", function(){
+									
+			})
+		});
+	</script>
 </head>
 <body>
 	<nav>
@@ -16,17 +25,25 @@
 			<a>BAND</a>
 			<a>TOUR</a>
 			<a>CONTACT</a>
-			<a class="float-r">Sign In</a>
+			<a class="float-r" href="/login">Sign In</a>
 		</div>
 	</nav>
 	<div>
 		<div class="main">
-			<img src="/resources/img/n.jpg" class="width100">
+			<img src="/resources/img/h.jpg" class="width100">
 		</div>
 		<div class="container padding64">
-			<div>
-				<button type="button">글쓰기</button>
-			</div>
+			<h2>게시판</h2>
+			
+				<form method="post" action="/" class="displayIB">
+					<input type="text" name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>	
+				<div class="displayIB float-r">
+					<a href="/write"><button type="button">글쓰기</button></a>
+				</div>
+				
+			
 			<table class="width100 text-c">
 				<thead>
 					<tr>
@@ -60,22 +77,8 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="blue">
-			<div class="container padding64">
-				<h2>THE BAND</h2>
-				<p>
-				We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. 
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-				Excepteur sint occaecat cupidatat non proident, 
-				sunt in culpa qui officia deserunt mollit anim id est laborum consecteturadipiscing elit, 
-				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</p>
-			</div>
-		</div>
 		<div class="container padding64">
+			<h2>게시판</h2>
 			<ul>
 				<li class="width30 margin20">
 					<div class="displayFlex">
@@ -105,6 +108,21 @@
 					</div>
 				</li>
 			</ul>
+		</div>
+		<div class="bgColor">
+			<div class="container padding64">
+				<h2>THE BAND</h2>
+				<p>
+				We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. 
+				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+				Excepteur sint occaecat cupidatat non proident, 
+				sunt in culpa qui officia deserunt mollit anim id est laborum consecteturadipiscing elit, 
+				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+			</div>
 		</div>
 	</div>
 </body>
