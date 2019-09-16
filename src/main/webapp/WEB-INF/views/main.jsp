@@ -65,7 +65,7 @@
 				} else {
 					for(int i = 0; i < list.size(); i++) {
 				%>
-					<tr>
+					<tr><a href="<%=list.get(i).getNo() %>"></a>
 						<td><%=list.get(i).getNo() %></td>
 						<td><%=list.get(i).getTitle() %></td>
 						<td><%=list.get(i).getText() %></td>
@@ -98,7 +98,7 @@
 						<span>내용</span>
 					</div>
 				</li>
-				<li class="width30 marginT">
+				<li class="width30 margin20">
 					<div class="displayFlex">
 						<img src="/resources/img/a.jpg" class="width100">
 					</div>

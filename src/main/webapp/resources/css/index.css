@@ -1,13 +1,13 @@
 @charset "UTF-8";
 html, body, h1, p, ul {margin: 0; padding: 0;}
-h1 {color: white; font-size: 64px; font-weight: 500;}
+h1 {color: white; font-size: 64px; font-weight: 500; margin: 30px 0;}
 
 .container {width: 90%; margin: 0 auto;}
 .loginBox {
-	width: 50vw; 
-	height: 50vh; 
-	background-color:rgba(60, 60, 60, 0.6);
-	position: absolute;
+		width: 50vw; 
+		height: 50vh; 
+		background-color:rgba(60, 60, 60, 0.6);
+		position: absolute;
   		top: 50%;
   		left: 50%;
   		transform: translate(-50%, -50%);
@@ -15,9 +15,9 @@ h1 {color: white; font-size: 64px; font-weight: 500;}
 .loginBox-half {height: 50%; width: 100%;}
 .bgimg {
 	background-image: url("/resources/img/sea.jpg");
-	min-height: 100%;
-			background-position: center;
-		background-size: cover;
+	min-height: 100vh;
+	background-position: center;
+	background-size: cover;
 }
 .text-c {text-align: center;}
 
